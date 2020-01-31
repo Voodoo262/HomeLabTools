@@ -29,6 +29,10 @@ fi
 # Copy recursively
 echo "Copying $1 to $TARGET_DIR/$2 ..."
 cp -r "$1" "$TARGET_DIR/$2"
+if [ $? -ne 0 ]; then
+    echo "Copy failed"
+    exit 1
+fi
 
 # Rename files
 cd "$TARGET_DIR/$2"
