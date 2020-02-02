@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# CloneVM.sh
+# CreateTemplateFromVM.sh
 # This script will copy an existing VM folder and rename all relevant files within.
 # This is useful if you have a datastore with a repository of VM templates and you
 # want to create a new instance of an existing template. It will change the name
