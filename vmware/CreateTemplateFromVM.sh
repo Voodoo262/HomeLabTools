@@ -12,7 +12,7 @@
 # Some code borrowed from https://github.com/alt250/Sundry/blob/whitespacefix/CloneVM.sh
 
 SOURCE_DIR=$(pwd)
-TARGET_DIR="/vmfs/volumes/NVMe Pool/VMs"
+TARGET_DIR="/vmfs/volumes/FreeNAS iSCSI/Templates"
 
 # Check syntax
 if [ "$#" -ne 2 ]; then
