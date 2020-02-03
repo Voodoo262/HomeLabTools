@@ -45,9 +45,10 @@ done
 
 # Replace VM references in VMDK files
 echo "Updating VMDK files..."
-VMDK_LIST=$(ls *.vmdk | grep -v "\-flat.vmdk" | grep -v "\-sesparse.vmdk")
-for VMDK in "${VMDK_LIST}"; do
-    sed -i "s/$1/$2/g" "$VMDK"
+for VMDK in *.vmdk; do
+    if [[ "$VMDK" != *"-flat.vmdk" ]] && [[ "$VMDK" != *"-flat.vmdk" ]]; then
+        sed -i "s/$1/$2/g" "$VMDK"
+    fi
 done
 
 # Replace VM references in snapshot file
